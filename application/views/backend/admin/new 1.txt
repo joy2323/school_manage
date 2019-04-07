@@ -1,0 +1,284 @@
+<style type="text/css">
+<!--
+.style2 {color: #990000}
+.style3 {font-size: 18px}
+-->
+#sider{float: left; width: 40%; margin-top: 80px;}
+#rit{float: right; width: 40%; margin-top: 80px;}
+h5{float: left;}
+
+.rotate {
+
+    -webkit-transform: rotate(90deg);
+    
+    -moz-transform: rotate(90deg);
+  
+    -ms-transform: rotate(90deg);
+
+    -o-transform: rotate(90deg);
+    
+    transform: rotate(90deg);
+  
+
+    position: relative; 
+    font-size: 12px;
+}
+</style>
+
+<h4>Adission No: .................&emsp;Names Of Student:.............................................................................................&emsp;Sex:..................</h4><br>
+<div><h4>Names Of Parent/Guardian: ............................&emsp;Address Of Parent/Guardian:.......................................................&emsp;<br><br>
+<div><h4>Form: .................&emsp;House:.....................&emsp;Home Town:...................&emsp;L.G.C:..................</h4></div><br><br>
+<div><h4>State: .................&emsp;D.C.C:.....................&emsp;Session:...................&emsp;Term:..................</h4></div><br><br>
+<div><h4>No In Class: .........&emsp;Position:.....................&emsp;Last Term's Position:...................</h4></div><br>
+
+
+																	<center><div border="3" padding="5">
+                                    <span onclick="window.print()" style="cursor:pointer; color: blue;">Print this Result</span><hr><br>
+																	
+																	<table width="95%" border="3" cellspacing="1" cellpadding="2">
+																		<tr><h2>COGNITIVE SKILL (ACADEMIC)</h2></tr>
+																	<tr>																		
+																		<tr>
+											                            <th rowspan="3"><div width="30px">SUBJECTS</div></th>
+											                            <th colspan="2"><div> ASSIGNMENT</div></th>
+											                            <th colspan="2"><div> TESTS</div></th>
+											                            <th rowspan="2"><div class="rotate"> EXAM <br>Marks</div></th>
+											                            <th rowspan="2"><div class="rotate"> Total<br> Score</div></th>
+											                            <th rowspan="3"><div class="rotate"> CLASS <br>AVERAGE</div></th>
+											                            <th rowspan="3"><div class="rotate"> POSITION</div></th>
+											                            <th rowspan="3"><div class="rotate"> GRADE</div></th>
+											                            <th rowspan="3"><div class="rotate"> REMARKS</div></th>
+											                            <th rowspan="3" height="50"><div class="rotate"> SIGNATURE</div></th>											                            
+											                            <th colspan="4"><div> YEAR SUMMARY</div></th>											                           											                            				                            
+											                        	</tr>
+
+											                        	<tr><td colspan="2" color="black"> CLASS <br>ASSIGNMENT </td>
+																		                                    <td class="rotate" height="60"> TESTS</td>
+                                                                        <td class="rotate"> TESTS </td>
+                                                                        <td class="rotate" rowspan="2"> 1st Term </td>
+                                                                        <td class="rotate" rowspan="2"> 2nd Term </td>
+																		                                    <td class="rotate" rowspan="2"> 3rd Term </td>
+                                                                        <td class="rotate" rowspan="2"> Ave Score</td>                                                                       
+
+                                                                    </tr>
+                                                                    <tr><td> 10 </td>
+                                    																		<td> 10 </td>
+                                                                        <td> 20 </td>
+                                                                        <td> 20 </td>
+                                                                        <td> 40 </td>
+																 <td> 100 </td>                                                                        
+                                                                    </tr>;
+																	
+																	<?php
+																	$drawResult="";
+																		$con = mysqli_connect("localhost","u0563804_rhimoni","G;]y-~5Zv^SK","u0563804_portal");
+																		
+																		$sql = "SELECT * FROM term_jss WHERE student_id=1 && session_id='2016/2017' ";
+																		$query = mysqli_query($con, $sql);
+																		while($rowst = mysqli_fetch_array($query)){																					
+																									
+																		if($rowst['subject_id']==1)
+																		{
+																			$subject="AGRICULTURAL SCIENCE";
+																		}
+																		else if($rowst['subject_id']==2)
+																		{
+																			$subject="BASIC SCIENCE";
+																		}	
+																		$ca1 = $rowst['ca1'];
+																		$ca2 = $rowst['ca2'];
+																		$stid = $rowst['student_id'];
+																		$t1 = $rowst['test1'];
+																		$t2 = $rowst['test2'];
+																		$exam = $rowst['exam'];
+																		$total = $rowst['total'];
+																		$class_avg = $rowst['class_avg'];
+																		$grade = $rowst['grade'];
+																		$position = $rowst['position'];
+																		$cd = $rowst['class_id'];
+																		$drawResult.='<tr><td> '.$subject.'</td>
+																	     <td> '.$ca1.' </td>
+                                                                        <td> '.$ca2.' </td>
+                                                                        
+                                                                        <td> '.$t1.' </td>
+																	   	<td> '.$t2.' </td>
+                                                                        <td> '.$exam.' </td>
+                                                                        <td> '.$total.' </td>
+                                                                        <td> '.$class_avg.' </td>
+																		 
+                                                                        <td> '.$grade.' </td>
+                                                                        <td> '.$position.' </td>
+																		<td> '.$stdid.' </td>
+																		<td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+																    	<td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        
+                                                                    </tr>
+																	</table>'
+																		}
+																	
+																	?>
+																	
+                                                                    <!--<tr><td> <div>AGRICULTURAL SCIENCE </div></td>
+																	     <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+																	                                     	<td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+																		                                    <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+																	                                     	<td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        
+                                                                    </tr>
+                                                                    <tr><td><div> BASIC SCIENCE </div></td>
+																		                                    <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+																		                                    <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+																		                                    <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+																	                                     	<td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        <td> '.$ca11.' </td>
+                                                                        
+                                                                    </tr>-->
+                                																	</tr></div></center>
+                                																	 </table><br>
+                               
+                                         <h5>Exam Total:.................&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Average:.................</h5><br/><br>
+                                         <h5>F=Fail(0-49)&emsp;&emsp;&emsp;&emsp;&emsp; P=Pass(6O-79):.................&emsp;&emsp;C=Credit(50-59):.................&emsp;&emsp;A=Excellent(80)  </h4><br/></h5><br/>
+
+
+                                          <table width="40%" border="3" cellspacing="1" cellpadding="2" id="sider">  
+                                                 <tr>RATINGS</tr>
+                                                 <tr>
+                                                  <th><div>AFFECTIVE TRAITS</div></th>
+                                                  <th><div> A</div></th>
+                                                  <th><div> B</div></th>
+                                                  <th><div> C</div></th>
+                                                  <th><div> D</div></th>
+                                                 </tr>
+                                                 <tr>
+                                                  <td> Punctuality</td>
+                                                  <td> </td>
+                                          		<td> </td>
+                                                  <td> </td>
+                                                  <td> </td>                        
+                                                 </tr>
+                                                 <tr>
+                                                  <td> Class Attendance</td>
+                                                  <td> </td>
+                                          		<td> </td>
+                                                  <td> </td>
+                                                  <td> </td>                        
+                                                 </tr>
+                                                 <tr>
+                                                  <td> Attentiveness</td>
+                                                  <td> </td>
+                                          		<td> </td>
+                                                  <td> </td>
+                                                  <td> </td>                        
+                                                 </tr>
+                                                 <tr>
+                                                  <td> Carrying Out Assignments</td>
+                                                  <td> </td>
+                                          		<td> </td>
+                                                  <td> </td>
+                                                  <td> </td>                        
+                                                 </tr>
+                                                 <tr>
+                                                  <td> Participation in School Activities</td>
+                                                  <td> </td>
+                                          		<td> </td>
+                                                  <td> </td>
+                                                  <td> </td>                        
+                                                 </tr>
+                                                 <tr>
+                                                  <td> Neatness</td>
+                                                  <td> </td>
+                                          		<td> </td>
+                                                  <td> </td>
+                                                  <td> </td>                        
+                                                 </tr>
+                                                 <tr>
+                                                  <td> Honesty</td>
+                                                  <td> </td>
+                                          		<td> </td>
+                                                  <td> </td>
+                                                  <td> </td>                        
+                                                 </tr>
+                                                 <tr>
+                                                  <td> Self-Control</td>
+                                                  <td> </td>
+                                          		<td> </td>
+                                                  <td> </td>
+                                                  <td> </td>                        
+                                                 </tr>
+                                                 <tr>
+                                                  <td> Relationship With Others</td>
+                                                  <td> </td>
+                                          		<td> </td>
+                                                  <td> </td>
+                                                  <td> </td>                        
+                                                 </tr>
+                                                 <tr>
+                                                  <td> Responsibility / Leadership</td>
+                                                  <td> </td>
+                                          		<td> </td>
+                                                  <td> </td>
+                                                  <td> </td>                        
+                                                 </tr>
+                                           </table>
+                                         
+
+                                                   	
+                                                  <table width="45%" border="3" cellspacing="1" cellpadding="2" id="rit">  
+                                                         <tr>RATINGS</tr>
+                                                         <tr>
+                                                          <th><div>PSYCHOMOTOR REPORT</div></th>
+                                                          <th><div> A</div></th>
+                                                          <th><div> B</div></th>
+                                                          <th><div> C</div></th>
+                                                          <th><div> D</div></th>
+                                                         </tr>
+                                                         <tr>
+                                                          <td> Games & Sport</td>
+                                                          <td> </td>
+                                                  		<td> </td>
+                                                          <td> </td>
+                                                          <td> </td>                        
+                                                         </tr>
+                                                         <tr>
+                                                          <td> Handling of Tools, Lab and Workshop</td>
+                                                          <td> </td>
+                                                  		<td> </td>
+                                                          <td> </td>
+                                                          <td> </td>                        
+                                                         </tr>
+                                                         <tr>
+                                                          <td> Drawing</td>
+                                                          <td> </td>
+                                                  		<td> </td>
+                                                          <td> </td>
+                                                          <td> </td>                        
+                                                         </tr>
+                                                   </table>
+                                                   
+                                       
+                                      </div>
+ 

@@ -1,0 +1,4 @@
+how to control population
+add marks for theory and practicals
+edit nbproject
+admin password update page not to be included

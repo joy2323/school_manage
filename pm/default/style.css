@@ -1,0 +1,196 @@
+/*****************************************************/
+/****General****/
+*
+{
+	margin:0px;
+	padding:0px;
+}
+body
+{
+	background:#eoeoeo;
+	padding-left:10%;
+	padding-right:10%;
+	font-family:Arial, Geneva, sans-serif;
+}
+a
+{
+	text-decoration:none;
+	color:#ee2418;
+}
+a:hover
+{
+	color:#0eaaff;
+}
+img, table, tr, td
+{
+	border:0px;
+}
+h1
+{
+	text-align:center;
+	margin:0px;
+	padding:0px;
+}
+.clean
+{
+	clear:both;
+}
+.left
+{
+	text-align:left;
+}
+.center
+{
+	text-align:center;
+}
+input
+{
+	width:150px;
+}
+label
+{
+	width:200px;
+	display:inline-block;
+	vertical-align:top;
+	text-align:left;
+}
+table
+{
+	border-spacing:5px;
+	background:#e0e0e0;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:15px;
+	padding:10px;
+	width:90%;
+	margin:3px auto 2px auto;
+}
+tr
+{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	margin:0px;
+}
+td, th
+{
+	margin:0px;
+	border:0px;
+	padding:3px;
+	text-align:center;
+}
+/*****************************************************/
+/****Blocks****/
+.header
+{
+	margin:auto;
+	margin-top:10px;
+	padding:15px;
+	background:none;
+	width:30%;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+	text-align:center;
+}
+.foot
+{
+	text-align:center;
+	background:#110aea;
+	width:100%;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	margin:auto;
+	padding:10px;
+	margin-top:20px;
+	color:#000000;
+}
+.content
+{
+	background:url('images/bluec_30p.png');
+	width:65%;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:70px;
+	margin:auto;
+	padding:40px;
+	margin-top:0;
+}
+
+.cont
+{
+	background:#2e0a5e;
+	width:auto;
+	height:auto;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:70px;
+	margin:auto;
+	padding:40px;
+	margin-top:0;
+}
+/*****************************************************/
+/****Content****/
+.big
+{
+	font-size:1.2em;
+}
+.small
+{
+	font-size:0.7em;
+}
+.message
+{
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+	padding:20px;
+	margin:auto;
+	width:500px;
+	background:url('images/black_40p.png');
+	color:#ffffff;
+	text-align:center;
+	font-weight:bold;
+	margin-top:20px;
+}
+
+.messages_table{
+	
+	width:85px;
+
+}
+ td
+{
+	border-top:1px solid #aaaaaa;
+	vertical-align:top;
+	width:85px;
+	height:auto;
+}
+
+.author
+{
+	width:150px;
+	border-right:1px solid #aaaaaa;
+}
+.title_cell
+{
+	width:85%;
+}
+.date
+{
+	font-style:italic;
+	text-align:right;
+	font-size:0.9em;
+	margin-right:10px;
+}
+.link_new_pm
+{
+	font-size:1.3em;
+	font-weight:bold;
+	margin:5px 0px 5px 0px;
+	display:inline-block;
+	border:5px solid #dddddd;
+	background:#ffffff;
+	padding:5px;
+}
